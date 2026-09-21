@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Team Task Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary" id="main-nav">
+        <div class="container-fluid">
+            <span class="navbar-brand">TaskFlow</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 mx-auto" id="main-content">
+                <h4 id="page-title">Team Tasks</h4>
+                
+                <!-- TODO -->
+                <div class="card" id="create-task-card">
+                    <div class="card-header">
+                        <h6>Create New Task</h6>
+                    </div>
+                    <div class="card-body">
+                        <form id="taskForm">
+                            <div class="mb-2">
+                                <label for="taskTitle" class="form-label">Task</label>
+                                <input type="text" class="form-control" id="taskTitle" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="taskDescription" class="form-label">Description</label>
+                                <input type="text" class="form-control" id="taskDescription">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <label for="taskDueDate" class="form-label">Due Date</label>
+                                    <input type="date" class="form-control" id="taskDueDate" required>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <label for="taskAssignee" class="form-label">Assigned To</label>
+                                    <select class="form-select" id="taskAssignee" required>
+                                        <option value="">Choose a person</option>
+                                        <option>Alex</option><option>Jordan</option><option>Taylor</option><option>Morgan</option><option>Casey</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">Add Task</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Task List -->
+                <h6 id="task-list-title">Current Tasks</h6>
+                <div id="taskList">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
